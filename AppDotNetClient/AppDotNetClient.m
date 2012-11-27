@@ -21,7 +21,7 @@
 @implementation AppDotNetClient
 
 static NSString* const kBaseURLString = @"https://alpha-api.app.net";
-static NSString* const kTokenKey = @"kAppDotNetTokenKey";
+static NSString* const kTokenKey = @"!kAppDotNetTokenKey";
 
 @synthesize token=_token;
 
