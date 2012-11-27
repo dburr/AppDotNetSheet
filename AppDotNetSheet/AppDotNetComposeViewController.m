@@ -128,6 +128,7 @@ static int const kMaxCharacters = 256;
                         completion:NULL];
         
         // Start the request
+        webView.delegate = self;
         [webView loadRequest:[NSURLRequest requestWithURL:[AppDotNetClient authenticationURL]]];
     }
 }
@@ -236,8 +237,11 @@ static int const kMaxCharacters = 256;
     else {
         // Scroll down to the login
         [webView stringByEvaluatingJavaScriptFromString:@"$('.navbar').hide();"];
-        [webView stringByEvaluatingJavaScriptFromString:@"window.scrollBy(5,157);"];
-        
+        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)  {
+            [webView stringByEvaluatingJavaScriptFromString:@"window.scrollBy(220,185);"];
+        } else {
+            [webView stringByEvaluatingJavaScriptFromString:@"window.scrollBy(5,157);"];
+        }
         [activityView stopAnimating];
         webView.hidden = NO;
     }

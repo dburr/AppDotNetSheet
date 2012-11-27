@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDotNetComposeViewController : UIViewController
+@interface AppDotNetComposeViewController : UIViewController <UIWebViewDelegate>
 
 @property (nonatomic, strong) IBOutlet UIView* containerView;
 
