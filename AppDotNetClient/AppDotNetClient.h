@@ -33,8 +33,14 @@ typedef void(^AppDotNetClientFailure)(NSError* error, NSNumber* errorCode, NSStr
 
 // Post a status
 + (void)postUpdate:(NSString*)text
+         withImage:(UIImage *)image
+          latitude:(double)latitude
+         longitude:(double)longitude
+          altitude:(double)altitude
+horizontalAccuracy:(double)horizontalAccuracy
+  verticalAccuracy:(double)verticalAccuracy
          replyToId:(NSString*)replyToId
-       annotations:(NSString*)annotations
+       annotations:(NSArray*)annotations
              links:(NSString*)links
            success:(void (^)(NSString* identifier))success
            failure:(AppDotNetClientFailure)failure;
