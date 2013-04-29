@@ -116,12 +116,12 @@ static NSString* const kTokenKey = @"!kAppDotNetTokenKey";
     NSString* url = [NSString stringWithFormat:@"https://alpha.app.net/oauth/authenticate"
                      "?client_id=%@"
                      "&response_type=token"
-                     "&redirect_uri=%@",
+                     "&redirect_uri=%@"
                      "&scope=%@"
                      "&adnview=appstore",
                      self.sharedClient.clientId,
-                     self.sharedClient.callbackURL];
-                     [self.sharedClient.scopes componentsJoinedByString:@"%20"],
+                     self.sharedClient.callbackURL,
+                     [self.sharedClient.scopes componentsJoinedByString:@"%20"]];
     return [NSURL URLWithString:url];
 }
 
