@@ -1,7 +1,5 @@
 # AppDotNetSheet
 
-Trivial change to test if git is working
-
 This project is aimed to be an easy way for iOS developers to add APP.NET sharing to their own applications. It is designed to look and behave similar to the iOS5 TWTweetComposeViewController / Tweet Sheet. I built it as a way to add sharing to our [Discovr](http://discovr.info) apps and a new app we have on the way :)
 
 ![Step 1](http://f.cl.ly/items/0r1B2c1e1Z3V0S2o1p18/AppDotNetSheet1.png)
