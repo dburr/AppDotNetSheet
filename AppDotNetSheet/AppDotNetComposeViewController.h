@@ -6,9 +6,20 @@
 //  Copyright (c) 2012 Stuart Hall. All rights reserved.
 //
 
+#import <CoreLocation/CoreLocation.h>
 #import <UIKit/UIKit.h>
 
-@interface AppDotNetComposeViewController : UIViewController <UIWebViewDelegate>
+@class AppDotNetComposeViewController;
+
+@protocol AppDotNetComposeViewControllerDelegate <NSObject>
+@required
+- (void)didDismissAppDotNetComposeViewController:(AppDotNetComposeViewController *)controller withSuccess:(BOOL)success;
+@end
+
+@interface AppDotNetComposeViewController : UIViewController <UIWebViewDelegate, CLLocationManagerDelegate>
+
+@property (nonatomic, strong) NSString *defaultText;
+@property (nonatomic, strong) UIImage *defaultImage;
 
 @property (nonatomic, strong) IBOutlet UIView* containerView;
 
@@ -23,6 +34,7 @@
 @property (nonatomic, strong) IBOutlet UIWebView* webView;
 @property (nonatomic, strong) IBOutlet UIActivityIndicatorView* activityView;
 
+@property (nonatomic, strong) id<AppDotNetComposeViewControllerDelegate> delegate;
 
 @property (nonatomic, strong) IBOutlet UIView* sendingView;
 
