@@ -73,17 +73,21 @@ static int const kImageURLLength = 20;
     return self;
 }
 
+/*
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    DLog(@"touchesBegan called");
     UITouch *touch = [touches anyObject];
     if (CGRectContainsPoint([shareLocationLabel frame], [touch locationInView:self.view]))
     {
         [self toggleShareLocation];
     }
 }
+*/
 
-- (void) toggleShareLocation
+- (IBAction) toggleShareLocation:(id)sender
 {
+    DLog(@"toggleShareLocation called");
     NSString *untickedBoxStr = [[NSString alloc] initWithString:@"\u2610 Share location?"];
     NSString *tickedBoxStr = [[NSString alloc] initWithString:@"\u2611 Share location?"];
     
@@ -224,6 +228,11 @@ static int const kImageURLLength = 20;
     tgr.numberOfTouchesRequired = 1;
     tgr.numberOfTapsRequired = 1;
     [imageView addGestureRecognizer:tgr];
+    UITapGestureRecognizer *tgr2 = [[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(toggleShareLocation:)] autorelease];
+    tgr2.numberOfTouchesRequired = 1;
+    tgr2.numberOfTapsRequired = 1;
+    [shareLocationLabel addGestureRecognizer:tgr2];
+
 }
 
 - (void)viewDidUnload

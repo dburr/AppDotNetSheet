@@ -244,10 +244,10 @@
 										<array key="IBUIGestureRecognizers" id="0"/>
 										<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 									</object>
-									<object class="IBUILabel" id="343150755">
+									<object class="IBUILabel" id="146056634">
 										<reference key="NSNextResponder" ref="1041108525"/>
 										<int key="NSvFlags">292</int>
-										<string key="NSFrame">{{84, 198}, {136, 21}}</string>
+										<string key="NSFrame">{{78, 195}, {136, 29}}</string>
 										<reference key="NSSuperview" ref="1041108525"/>
 										<reference key="NSWindow"/>
 										<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -262,11 +262,11 @@
 										</object>
 										<nil key="IBUIHighlightedColor"/>
 										<int key="IBUIBaselineAdjustment">0</int>
-										<object class="IBUIFontDescription" key="IBUIFontDescription" id="493377342">
+										<object class="IBUIFontDescription" key="IBUIFontDescription" id="57489159">
 											<int key="type">1</int>
 											<double key="pointSize">13</double>
 										</object>
-										<object class="NSFont" key="IBUIFont" id="631581394">
+										<object class="NSFont" key="IBUIFont" id="455908126">
 											<string key="NSName">Helvetica</string>
 											<double key="NSSize">13</double>
 											<int key="NSfFlags">16</int>
@@ -292,8 +292,8 @@
 											<bytes key="NSWhite">MC40Nzk3Mjc0MTc5AA</bytes>
 										</object>
 										<reference key="IBUINormalTitleShadowColor" ref="640440878"/>
-										<reference key="IBUIFontDescription" ref="493377342"/>
-										<reference key="IBUIFont" ref="631581394"/>
+										<reference key="IBUIFontDescription" ref="57489159"/>
+										<reference key="IBUIFont" ref="455908126"/>
 									</object>
 								</array>
 								<string key="NSFrame">{{20, 20}, {310, 227}}</string>
@@ -595,7 +595,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">shareLocationLabel</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="343150755"/>
+						<reference key="destination" ref="146056634"/>
 					</object>
 					<int key="connectionID">57</int>
 				</object>
@@ -731,7 +731,7 @@
 							<reference ref="408061923"/>
 							<reference ref="10614735"/>
 							<reference ref="413708160"/>
-							<reference ref="343150755"/>
+							<reference ref="146056634"/>
 						</array>
 						<reference key="parent" ref="429140342"/>
 					</object>
@@ -802,7 +802,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">56</int>
-						<reference key="object" ref="343150755"/>
+						<reference key="object" ref="146056634"/>
 						<reference key="parent" ref="1041108525"/>
 					</object>
 				</array>
@@ -848,17 +848,35 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">AppDotNetComposeViewController</string>
 					<string key="superclassName">UIViewController</string>
-					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">cancelImageSharing:</string>
-						<string key="NS.object.0">id</string>
-					</object>
-					<object class="NSMutableDictionary" key="actionInfosByName">
-						<string key="NS.key.0">cancelImageSharing:</string>
-						<object class="IBActionInfo" key="NS.object.0">
+					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="cancelImageSharing:">id</string>
+						<string key="onCancel:">UIButton</string>
+						<string key="onCancelLogin:">id</string>
+						<string key="onLogout:">id</string>
+						<string key="onSend:">id</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="cancelImageSharing:">
 							<string key="name">cancelImageSharing:</string>
 							<string key="candidateClassName">id</string>
 						</object>
-					</object>
+						<object class="IBActionInfo" key="onCancel:">
+							<string key="name">onCancel:</string>
+							<string key="candidateClassName">UIButton</string>
+						</object>
+						<object class="IBActionInfo" key="onCancelLogin:">
+							<string key="name">onCancelLogin:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="onLogout:">
+							<string key="name">onLogout:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="onSend:">
+							<string key="name">onSend:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="activityView">UIActivityIndicatorView</string>
 						<string key="backgroundView">UIView</string>
